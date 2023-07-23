@@ -2,14 +2,14 @@
 <!-- saved from url=(0041)https://yaden2018.github.io/multispeaker/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
-    <title>TTSSpeechBERT
+    <title>Many-to-One Adversarial Perturbation
 </title>
     <link rel="shortcut icon" href="https://vancycici.github.io/fbdecode/img/ms.jpg">
     <link rel="icon" href="https://vancycici.github.io/fbdecode/img/ms.jpg">
     <link rel="apple-touch-icon" href="https://vancycici.github.io/fbdecode/img/ms.jpg">
 </head>
 <body>
-<script type="text/javascript" async="" src="./SPEECH BERT EMBEDDING FOR IMPROVING PROSODY IN NEURAL TTS/analytics.js.download"></script><script async="" src="./SPEECH BERT EMBEDDING FOR IMPROVING PROSODY IN NEURAL TTS/js"></script>
+<script type="text/javascript" async="" src="./Many-to-One Adversarial Speech Generation for Voice Privacy Protection/analytics.js.download"></script><script async="" src="./Many-to-One Adversarial Speech Generation for Voice Privacy Protection/js"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -23,12 +23,12 @@
 
 <article>
     <header>
-        <h1>SPEECH BERT EMBEDDING FOR IMPROVING PROSODY IN NEURAL TTS</h1>
+        <h1>Many-to-One Adversarial Speech Generation for Voice Privacy Protection</h1>
     </header>
 </article> 
-<div><b>Authors:</b> Liping Chen, Yan Deng, Xi Wang, Frank K. Soong, Lei He</a> (In proceedings ICASSP 2021</a>)</div>
+<div><b>Authors:</b> Liping Chen, Shihao Chen, Kong Aik Lee, Li-Rong Dai, Zhen-Hua Ling</a> </div>
  
-<div><b>Abstract:</b> This paper presents a speech BERT model designed for neural text-to-speech (TTS), to extract the embedding that represents latent prosody attributes in speech segments, where BERT stands for Bidirectional Encoder Representations from Transformers. As a pre-training model, it can learn the prosody attributes from a large scale of data, which is not confined by the training data of TTS model. In our proposed method, the embedding is extracted from the previous segment of a fixed length, and applied in combination with mel-spectrogram to the decoder of neural TTS to predict the frames in the following segment. Experimental results on Transformer TTS show that the proposed method can be used to extract fine-grained segment-level prosody information, which is complementary to current utterance-level prosody modeling in neural TTS. The objective results on our internal single speaker TTS corpus demonstrate its effectiveness at closing the gap between generated speech and recordings in terms of prosody. Furthermore, the subjective results show that our proposed method are more preferred in both in-domain and out-of-domain texts, on our internal professional single speaker, multiple speakers and the public LJ Speaker.
+<div><b>Abstract:</b> In this paper, we focus on hiding and obfuscating the speaker identities that can be perceived by speaker recognition modeling while preserving the perceptual speaker attributes. To this end, we resort to the speaker adversarial perturbation technique and propose a framework for adversarial speech generation. In our proposed framework, the many-to-one concept was applied for supervising speaker perturbation generation. That is, the speakers within all speech files are perceived to be a common unreal speaker by speaker models. Besides, speech frames select their corresponding perturbation according to the attributes within themselves. Our speaker identification and verification experiments carried out on VoxCeleb1 and 2 justified the effectiveness of the proposed method in misleading speaker identification decisions, hiding and obfuscating speaker identity in both white- and black-box evaluations and for both seen and unseen speakers. Moreover, its capability in perturbing diarization system was justified. As a preliminary work in voice privacy aimed at protecting speaker identity while preserving perceptual speaker attributes, this paper will establish the foundation for our future research. Audio samples can be found in .
 </div> 
 
 <br/>
@@ -36,285 +36,459 @@
 <br/>
 
 
-Firstly, we will present the reconstructed speech using the BERT model (audio unseen in the speech BERT model training).
-
+Here, we present samples generated using several adversarial perturbation generation methods proposed in the paper. In the context of the experiments, 'Recording' represents the original speech, 'MI-FGSM' denotes the adversarial samples generated using the MI-FGSM method, 'Mean Only' signifies the results obtained solely using the Batch Mean loss function as presented in the paper, 'Angular Only' refers to the outcomes obtained solely using the Angular loss function proposed in the paper, while 'Proposed' represents the best results demonstrated in our paper.
+Due to the limitation of MI-FGSM in perturbing speech from unseen speakers, the samples presented here were selected from our curated in-set test dataset in Voxceleb1. We randomly selected 6 male and 6 female speakers from the dataset and generated corresponding adversarial samples using the four aforementioned methods.
 <div>
-    <h3>Masked segment reconstructed by speech BERT with Griffin-Lim vocoder</h3>
+    <h3>Male</h3>
     
-    <i>There was not a worse vagabond in Shrewsbury than old Barney the piper.</i>
-        <table><tbody><tr>
-            <td>Recording:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/100_121669_000004_000000.ori-gl.wav">
-                </audio>
-            </td>
-            <td></td>
-            <td>Padded input:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/100_121669_000004_000000.padded-gl.wav">
-                </audio>
-            </td>
-            <td></td>
-            <td>Reconstructed output:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/100_121669_000004_000000-gl.wav">
-                </audio>
-            </td>
-        </tr>
-    </tbody></table>
-    <i>His name was John Palmer.</i>
+	<table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\male\highsnr\m2 id10202 cMkqpoAnyRA.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/highsnr/m2_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/highsnr/m2_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/highsnr/m2_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/highsnr/m2_73.wav">
+			</audio>
+		</td>
+	</tr>
+</tbody></table>
     <table><tbody><tr>
-        <td>Recording:</td>
-        <td>
-            <audio controls="">
-                <source src="wav/1006_135212_000002_000004.ori-gl.wav">
-            </audio>
-        </td>
-        <td></td>
-        <td>Padded input:</td>
-        <td>
-            <audio controls="">
-                <source src="wav/1006_135212_000002_000004.padded-gl.wav">
-            </audio>
-        </td>
-        <td></td>
-        <td>Reconstructed output:</td>
-        <td>
-            <audio controls="">
-                <source src="wav/1006_135212_000002_000004-gl.wav">
-            </audio>
-        </td>
-    </tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\male\highsnr\m3 id10089 7_5fKD7BBPk 00008.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/highsnr/m3_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/highsnr/m3_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/highsnr/m3_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/highsnr/m3_73.wav">
+			</audio>
+		</td>
+	</tr>
 </tbody></table>
-
-<br/>
-<br/>
-<br/>
-Next, the audio files for F0 contour comparison as shown in Fig. 4 will be listed. The recording, speech synthesized without and with speech BERT embedding are included as follows.
-<h3>F0 contour comparison</h3>
-
-<i>But the dilemma for Macedonia is even deeper than that.</i>
-        <table><tbody><tr>
-            <td>Recording:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/single_spkr/f0_contour/0000000336_recording.wav">
-                </audio>
-            </td>
-            <td></td>
-            <td>w/o:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/single_spkr/f0_contour/0000000336_wo.wav">
-                </audio>
-            </td>
-            <td></td>
-            <td>w/:</td>
-            <td>
-                <audio controls="">
-                    <source src="wav/single_spkr/f0_contour/0000000336_w.wav">
-                </audio>
-            </td>
-        </tr>
-    </tbody></table>
-
-<br/>
-<br/>
-<br/>
-Then, the synthesized speech in our experiments for subjective evaluation will be listed in the order of <i>internal single speaker</i> followed by the <i>LJ speaker</i>.
-
-<h3>Internal single speaker</h3>
+   <table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\male\midsnr\m5 id111110 EuI2zU72uo 00002.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/midsnr/m5_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/midsnr/m5_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/midsnr/m5_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/midsnr/m5_73.wav">
+			</audio>
+		</td>
+	</tr>
+</tbody></table>
 <table><tbody><tr>
-    <td>Recording sample:</td>
-    <td>
-        <audio controls="">
-            <source src="wav/single_spkr/0000000336.wav">
-        </audio>
-    </td>
-    <td></td>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\male\midsnr\m6 id10099 ndJZpFvW8kY 00004.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/midsnr/m6_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/midsnr/m6_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/midsnr/m6_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/midsnr/m6_73.wav">
+			</audio>
+		</td>
+	</tr>
 </tbody></table>
-
-<br/>
-
-<table style="margin-left:auto;margin-right:auto;"><tbody><tr>
-        <td colspan="3"><b>In-domain synthesized speech synthesis with WaveNet vocoder</b></td>
-</tr>
-        <tr><td></td>
-    <td style="text-align:center">w/o</td>
-    <td style="text-align:center">w</td>
-        </tr>
-    <tr>
-    <td><i>NASA's five Apollo moon landings remain the singular achievement of the space age.</i></td>
-    <td>
-        <audio controls="">
-            <source src="wav/single_spkr/0000000065_wo.wav">
-        </audio>
-    </td>
-    <td>
-        <audio controls="">
-            <source src="wav/single_spkr/0000000065_w.wav">
-        </audio>
-    </td>
-</tr>
-<tr>
-        <td><i>The dotted mental lines between bands, musicians and influences became an obsession.</i></td>
-        <td>
-            <audio controls="">
-                <source src="wav/single_spkr/0000000063_wo.wav">
-            </audio>
-        </td>
-        <td>
-            <audio controls="">
-                <source src="wav/single_spkr/0000000063_w.wav">
-            </audio>
-        </td>
-    </tr>
-</tr>
-</tbody></table>
-
-<br/>
-
-<table style="margin-left:auto;margin-right:auto;"><tbody><tr>
-        <td colspan="3"><b>Out-of-domain synthesized speech synthesis with WaveNet vocoder</b></td>
-</tr>
-<tr><td></td>
-    <td style="text-align:center">w/o</td>
-    <td style="text-align:center">w</td>
-</tr>
-<tr>
-    <td><i>The dispatcher later explains she doesn't have more details because the caller was "uncooperative."</i></td>
-    <td>
-        <audio controls="">
-            <source src="wav/single_spkr/000000000000022_wo.wav">
-        </audio>
-    </td>
-    <td>
-        <audio controls="">
-            <source src="wav/single_spkr/000000000000022_w.wav">
-        </audio>
-    </td>
-</tr>
-
-<tr>
-    <td><i>In the video, she cradled her baby bump while wearing a white dress.</i></td>
-    <td>
-        <audio controls="">
-            <source src="wav/single_spkr/000000000000030_wo.wav">
-        </audio>
-    </td>
-    <td>
-        <audio controls="">
-           <source src="wav/single_spkr/000000000000030_w.wav">
-        </audio>
-    </td>
-</tr>
-</tbody></table>
-
-<h3>LJ speaker</h3>
-Note that for LJ speaker, the WaveNet voder was a universal model trained on multiple speakers, thus the speech quality of the synthesized speech is not very good. But we still can feel the prosody difference between the two methods.
 <table><tbody><tr>
-    <td>Recording sample:</td>
-    <td>
-        <audio controls="">
-            <source src="wav/LJ/LJ037-0171.wav">
-        </audio>
-    </td>
-    <td></td>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\male\lowsnr\m1_raw.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/lowsnr/m1_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/lowsnr/m1_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/lowsnr/m1_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/lowsnr/m1_73.wav">
+			</audio>
+		</td>
+	</tr>
 </tbody></table>
-
-<table style="margin-left:auto;margin-right:auto;"><tbody><tr>
-        <td colspan="3"><b>In-domain synthesized speech synthesis with WaveNet vocoder</b></td>
-</tr>
-<tr><td></td>
-    <td style="text-align:center">w/o</td>
-    <td style="text-align:center">w</td>
-        </tr>
-    <tr>
-    <td><i>The fellow is stricken with a judgment, and is mad!</i></td>
-    <td>
-        <audio controls="">
-            <source src="wav/LJ/0000000008_wo.wav">
-        </audio>
-    </td>
-    <td>
-        <audio controls="">
-            <source src="wav/LJ/0000000008_w.wav">
-        </audio>
-    </td>
-</tr>
-<!--
-<tr>
-        <td><i>But Moses fled from the presence of Pharaoh and took up his abode in the land of Midian.</i></td>
-        <td>
-            <audio controls="">
-                <source src="wav/LJ/0000000016_wo.wav">
-            </audio>
-        </td>
-        <td>
-            <audio controls="">
-                <source src="wav/LJ/0000000016_w.wav">
-            </audio>
-        </td>
-    </tr>
-	-->
-</tr>
-<tr>
-    <tr>
-        <td><i>He should take possession of any food, medicine, vomited matter, urine, or faeces, in the room, and should seal them up in clean vessels for examination.</i></td>
-        <td>
-            <audio controls="">
-                <source src="wav/LJ/0000000013_wo.wav">
-            </audio>
-        </td>
-        <td>
-            <audio controls="">
-                <source src="wav/LJ/0000000013_w.wav">
-            </audio>
-        </td>
-    </tr>
-</tr>
+<table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\male\lowsnr\m4 id11199 wQJSEir2QMk 00007.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/lowsnr/m4_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/lowsnr/m4_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/lowsnr/m4_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/lowsnr/m4_73.wav">
+			</audio>
+		</td>
+	</tr>
 </tbody></table>
-
 <br/>
-
-
-<table style="margin-left:auto;margin-right:auto;"><tbody><tr>
-        <td colspan="3"><b>Out-of-domain synthesized speech synthesis with WaveNet vocoder</b></td>
-</tr>
-        <tr><td></td>
-    <td style="text-align:center">w/o</td>
-    <td style="text-align:center">w</td>
-        </tr>
-    <tr>
-    <td><i>But what the nation is witnessing is not protest and it is certainly not heroic.</i></td>
-    <td>
-        <audio controls="">
-            <source src="wav/LJ/news_0000000008_wo.wav">
-        </audio>
-    </td>
-    <td>
-        <audio controls="">
-            <source src="wav/LJ/news_0000000008_w.wav">
-        </audio>
-    </td>
-</tr>
-<tr>
-        <td><i>Everyone is doing well. No evacuations during the storm, she said.</i></td>
-        <td>
-            <audio controls="">
-                <source src="wav/LJ/news_0000000015_wo.wav">
-            </audio>
-        </td>
-        <td>
-            <audio controls="">
-                <source src="wav/LJ/news_0000000015_w.wav">
-            </audio>
-        </td>
-    </tr>
-
+<br/>
+<br/>
+<h3>Female</h3>
+    
+	<table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\female\highsnr\f3 id11205 iVMFwnEPwLA 00027.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/highsnr/f3_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/highsnr/f3_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/highsnr/f3_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/highsnr/f3_73.wav">
+			</audio>
+		</td>
+	</tr>
+</tbody></table>
+    <table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\female\highsnr\f4 id11250 YEixBpNT3Ro 00006.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/highsnr/f4_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/highsnr/f4_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/highsnr/f4_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/highsnr/f4_73.wav">
+			</audio>
+		</td>
+	</tr>
+</tbody></table>
+   <table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\female\midsnr\f1 id10965 OHDRhzSfICk 00008.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/midsnr/f1_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/midsnr/f1_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/midsnr/f1_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/midsnr/f1_73.wav">
+			</audio>
+		</td>
+	</tr>
+</tbody></table>
+<table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\female\midsnr\f2 id10509 x0C7gnx0o0Q 00001.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/midsnr/f2_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/midsnr/f2_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/midsnr/f2_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/midsnr/f2_73.wav">
+			</audio>
+		</td>
+	</tr>
+</tbody></table>
+<table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\female\lowsnr\f5 id11146 y9hc03Qq22k 00002.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/lowsnr/f5_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/lowsnr/f5_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/lowsnr/f5_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/lowsnr/f5_73.wav">
+			</audio>
+		</td>
+	</tr>
+</tbody></table>
+<table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\female\lowsnr\f6 id11131w6-IAfGqdwo 00002.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/lowsnr/f6_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/lowsnr/f6_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/lowsnr/f6_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/lowsnr/f6_73.wav">
+			</audio>
+		</td>
+	</tr>
 </tbody></table>
 
 </div>
