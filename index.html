@@ -36,7 +36,7 @@
 <br/>
 
 
-Here, we present samples generated using several adversarial perturbation generation methods proposed in the paper. In the context of the experiments, 'Recording' represents the original speech, 'MI-FGSM' denotes the adversarial samples generated using the MI-FGSM method, 'Mean Only' signifies the results obtained solely using the Batch Mean loss function as presented in the paper, 'Angular Only' refers to the outcomes obtained solely using the Angular loss function proposed in the paper, while 'Proposed' represents the best results demonstrated in our paper.
+Here, we present samples generated using several adversarial perturbation generation methods proposed in the paper. In the context of the experiments, 'Recording' represents the original speech, 'MI-FGSM' denotes the adversarial samples generated using the MI-FGSM method, 'Feedforward' denotes the adversarial samples generated using the Feedforward method, 'Mean Only' signifies the results obtained solely using the Batch Mean loss function as presented in the paper, 'Angular Only' refers to the outcomes obtained solely using the Angular loss function proposed in the paper, while 'Proposed' represents the best results demonstrated in our paper.
 Due to the limitation of MI-FGSM in perturbing speech from unseen speakers, the samples presented here were selected from our curated in-set test dataset in Voxceleb1. We randomly selected 6 male and 6 female speakers from the dataset and generated corresponding adversarial samples using the four aforementioned methods.
 <div>
     <h3>Male</h3>
@@ -45,224 +45,443 @@ Due to the limitation of MI-FGSM in perturbing speech from unseen speakers, the 
 		<td>Recording:</td>
 		<td>
 			<audio controls="">
-				<source src="wav\male\highsnr\m2 id10202 cMkqpoAnyRA.wav">
+				<source src="wav\male\m2 id10202 cMkqpoAnyRA 00005.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>MI-FGSM:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/highsnr/m2_mifgsm.wav">
+				<source src="wav/male/m2_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m2_untarget.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Mean Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/highsnr/m2_mean.wav">
+				<source src="wav/male/m2_mean.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Angular Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/highsnr/m2_far.wav">
+				<source src="wav/male/m2_far.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Proposed:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/highsnr/m2_73.wav">
+				<source src="wav/male/m2_73.wav">
 			</audio>
 		</td>
 	</tr>
-</tbody></table>
-    <table><tbody><tr>
+	</table></body>
+	<table><tbody><tr>
 		<td>Recording:</td>
 		<td>
 			<audio controls="">
-				<source src="wav\male\highsnr\m3 id10089 7_5fKD7BBPk 00008.wav">
+				<source src="wav\male\m1 id10930 8x9bSm1IpXQ 00001.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>MI-FGSM:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/highsnr/m3_mifgsm.wav">
+				<source src="wav/male/m1_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m1_untarget.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Mean Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/highsnr/m3_mean.wav">
+				<source src="wav/male/m1_mean.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Angular Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/highsnr/m3_far.wav">
+				<source src="wav/male/m1_far.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Proposed:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/highsnr/m3_73.wav">
+				<source src="wav/male/m1_73.wav">
 			</audio>
 		</td>
 	</tr>
-</tbody></table>
-   <table><tbody><tr>
+	</table></body>
+	<table><tbody><tr>
 		<td>Recording:</td>
 		<td>
 			<audio controls="">
-				<source src="wav\male\midsnr\m5 id111110 EuI2zU72uo 00002.wav">
+				<source src="wav\male\m3 id10089 7_5fKD7BBPk 00008.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>MI-FGSM:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/midsnr/m5_mifgsm.wav">
+				<source src="wav/male/m3_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m3_untarget.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Mean Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/midsnr/m5_mean.wav">
+				<source src="wav/male/m3_mean.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Angular Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/midsnr/m5_far.wav">
+				<source src="wav/male/m3_far.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Proposed:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/midsnr/m5_73.wav">
+				<source src="wav/male/m3_73.wav">
 			</audio>
 		</td>
 	</tr>
-</tbody></table>
-<table><tbody><tr>
+	</table></body>
+	<table><tbody><tr>
 		<td>Recording:</td>
 		<td>
 			<audio controls="">
-				<source src="wav\male\midsnr\m6 id10099 ndJZpFvW8kY 00004.wav">
+				<source src="wav\male\m4 id11199 wQJSEir2QMk 00007.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>MI-FGSM:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/midsnr/m6_mifgsm.wav">
+				<source src="wav/male/m4_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m4_untarget.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Mean Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/midsnr/m6_mean.wav">
+				<source src="wav/male/m4_mean.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Angular Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/midsnr/m6_far.wav">
+				<source src="wav/male/m4_far.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Proposed:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/midsnr/m6_73.wav">
+				<source src="wav/male/m4_73.wav">
 			</audio>
 		</td>
 	</tr>
-</tbody></table>
-<table><tbody><tr>
+	</table></body>
+	<table><tbody><tr>
 		<td>Recording:</td>
 		<td>
 			<audio controls="">
-				<source src="wav\male\lowsnr\m1_raw.wav">
+				<source src="wav\male\m5 id11111 0EuI2zU72uo 00002.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>MI-FGSM:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/lowsnr/m1_mifgsm.wav">
+				<source src="wav/male/m5_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m5_untarget.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Mean Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/lowsnr/m1_mean.wav">
+				<source src="wav/male/m5_mean.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Angular Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/lowsnr/m1_far.wav">
+				<source src="wav/male/m5_far.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Proposed:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/lowsnr/m1_73.wav">
+				<source src="wav/male/m5_73.wav">
 			</audio>
 		</td>
 	</tr>
-</tbody></table>
-<table><tbody><tr>
+	</table></body>
+	<table><tbody><tr>
 		<td>Recording:</td>
 		<td>
 			<audio controls="">
-				<source src="wav\male\lowsnr\m4 id11199 wQJSEir2QMk 00007.wav">
+				<source src="wav\male\m6 id10099 ndJZpFvW8kY 00004.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>MI-FGSM:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/lowsnr/m4_mifgsm.wav">
+				<source src="wav/male/m6_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m6_untarget.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Mean Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/lowsnr/m4_mean.wav">
+				<source src="wav/male/m6_mean.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Angular Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/lowsnr/m4_far.wav">
+				<source src="wav/male/m6_far.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Proposed:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/male/lowsnr/m4_73.wav">
+				<source src="wav/male/m6_73.wav">
 			</audio>
 		</td>
 	</tr>
-</tbody></table>
+	</table></body>
+	<table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\male\m7 id10003 E_6MjfYr0sQ 00021.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m7_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m7_untarget.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m7_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m7_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m7_73.wav">
+			</audio>
+		</td>
+	</tr>
+	</table></body>
+	<table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\male\m8 id10051 r33ucNHiqpw 00002.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m8_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m8_untarget.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m8_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m8_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m8_73.wav">
+			</audio>
+		</td>
+	</tr>
+	</table></body>
+	<table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\male\m9 id10146 3GpKr8kPlsc 00002.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m9_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m9_untarget.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m9_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m9_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m9_73.wav">
+			</audio>
+		</td>
+	</tr>
+	</table></body>
+	<table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\male\m10 id10993 sE2Ju0mmX0U 00105.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m10_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m10_untarget.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m10_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m10_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/male/m10_73.wav">
+			</audio>
+		</td>
+	</tr>
+	</table></body>
+
 <br/>
 <br/>
 <br/>
@@ -272,225 +491,442 @@ Due to the limitation of MI-FGSM in perturbing speech from unseen speakers, the 
 		<td>Recording:</td>
 		<td>
 			<audio controls="">
-				<source src="wav\female\highsnr\f3 id11205 iVMFwnEPwLA 00027.wav">
+				<source src="wav\female\f3 id11205 iVMFwnEPwLA 00027.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>MI-FGSM:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/highsnr/f3_mifgsm.wav">
+				<source src="wav/female/f3_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f3_untarget.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Mean Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/highsnr/f3_mean.wav">
+				<source src="wav/female/f3_mean.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Angular Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/highsnr/f3_far.wav">
+				<source src="wav/female/f3_far.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Proposed:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/highsnr/f3_73.wav">
+				<source src="wav/female/f3_73.wav">
 			</audio>
 		</td>
 	</tr>
-</tbody></table>
-    <table><tbody><tr>
+	</table></body>
+	<table><tbody><tr>
 		<td>Recording:</td>
 		<td>
 			<audio controls="">
-				<source src="wav\female\highsnr\f4 id11250 YEixBpNT3Ro 00006.wav">
+				<source src="wav\female\f1 id10965 OHDRhzSfICk 00008.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>MI-FGSM:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/highsnr/f4_mifgsm.wav">
+				<source src="wav/female/f1_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f1_untarget.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Mean Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/highsnr/f4_mean.wav">
+				<source src="wav/female/f1_mean.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Angular Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/highsnr/f4_far.wav">
+				<source src="wav/female/f1_far.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Proposed:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/highsnr/f4_73.wav">
+				<source src="wav/female/f1_73.wav">
 			</audio>
 		</td>
 	</tr>
-</tbody></table>
-   <table><tbody><tr>
+	</table></body>
+	<table><tbody><tr>
 		<td>Recording:</td>
 		<td>
 			<audio controls="">
-				<source src="wav\female\midsnr\f1 id10965 OHDRhzSfICk 00008.wav">
+				<source src="wav\female\f2 id10509 x0C7gnx0o0Q 00001.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>MI-FGSM:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/midsnr/f1_mifgsm.wav">
+				<source src="wav/female/f2_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f2_untarget.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Mean Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/midsnr/f1_mean.wav">
+				<source src="wav/female/f2_mean.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Angular Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/midsnr/f1_far.wav">
+				<source src="wav/female/f2_far.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Proposed:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/midsnr/f1_73.wav">
+				<source src="wav/female/f2_73.wav">
 			</audio>
 		</td>
 	</tr>
-</tbody></table>
-<table><tbody><tr>
+	</table></body>
+	<table><tbody><tr>
 		<td>Recording:</td>
 		<td>
 			<audio controls="">
-				<source src="wav\female\midsnr\f2 id10509 x0C7gnx0o0Q 00001.wav">
+				<source src="wav\female\f4 id11250 YEixBpNT3Ro 00006.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>MI-FGSM:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/midsnr/f2_mifgsm.wav">
+				<source src="wav/female/f4_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f4_untarget.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Mean Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/midsnr/f2_mean.wav">
+				<source src="wav/female/f4_mean.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Angular Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/midsnr/f2_far.wav">
+				<source src="wav/female/f4_far.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Proposed:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/midsnr/f2_73.wav">
+				<source src="wav/female/f4_73.wav">
 			</audio>
 		</td>
 	</tr>
-</tbody></table>
-<table><tbody><tr>
+	</table></body>
+	<table><tbody><tr>
 		<td>Recording:</td>
 		<td>
 			<audio controls="">
-				<source src="wav\female\lowsnr\f5 id11146 y9hc03Qq22k 00002.wav">
+				<source src="wav\female\f5 id11146 y9hc03Qq22k 00002.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>MI-FGSM:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/lowsnr/f5_mifgsm.wav">
+				<source src="wav/female/f5_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f5_untarget.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Mean Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/lowsnr/f5_mean.wav">
+				<source src="wav/female/f5_mean.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Angular Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/lowsnr/f5_far.wav">
+				<source src="wav/female/f5_far.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Proposed:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/lowsnr/f5_73.wav">
+				<source src="wav/female/f5_73.wav">
 			</audio>
 		</td>
 	</tr>
-</tbody></table>
-<table><tbody><tr>
+	</table></body>
+	<table><tbody><tr>
 		<td>Recording:</td>
 		<td>
 			<audio controls="">
-				<source src="wav\female\lowsnr\f6 id11131w6-IAfGqdwo 00002.wav">
+				<source src="wav\female\f6 id11131w6-IAfGqdwo 00002.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>MI-FGSM:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/lowsnr/f6_mifgsm.wav">
+				<source src="wav/female/f6_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f6_untarget.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Mean Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/lowsnr/f6_mean.wav">
+				<source src="wav/female/f6_mean.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Angular Only:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/lowsnr/f6_far.wav">
+				<source src="wav/female/f6_far.wav">
 			</audio>
 		</td>
 		<td></td>
 		<td>Proposed:</td>
 		<td>
 			<audio controls="">
-				<source src="wav/female/lowsnr/f6_73.wav">
+				<source src="wav/female/f6_73.wav">
 			</audio>
 		</td>
 	</tr>
-</tbody></table>
+	</table></body>
+	<table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\female\f7 id10077 xQ1Yy0kjvjA 00006.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f7_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f7_untarget.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f7_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f7_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f7_73.wav">
+			</audio>
+		</td>
+	</tr>
+	</table></body>
+	<table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\female\f8 id10086 4CbDDs8dflA 00003.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f8_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f8_untarget.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f8_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f8_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f8_73.wav">
+			</audio>
+		</td>
+	</tr>
+	</table></body>
+	<table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\female\f9 id10434 2GCCSDEPRNs 00002.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f9_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f9_untarget.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f9_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f9_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f9_73.wav">
+			</audio>
+		</td>
+	</tr>
+	</table></body>
+	<table><tbody><tr>
+		<td>Recording:</td>
+		<td>
+			<audio controls="">
+				<source src="wav\female\f10 id10896 hDaAPpbyIhM 00004.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>MI-FGSM:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f10_mifgsm.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Feedforward:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f10_untarget.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Mean Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f10_mean.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Angular Only:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f10_far.wav">
+			</audio>
+		</td>
+		<td></td>
+		<td>Proposed:</td>
+		<td>
+			<audio controls="">
+				<source src="wav/female/f10_73.wav">
+			</audio>
+		</td>
+	</tr>
+	</table></body>
 
 </div>
-
 </body></html>
